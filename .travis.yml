@@ -11,8 +11,8 @@ matrix:
     - os: linux
 
 script:
-  - make 32bit
-  - make 64bit
+  - sudo make 32bit
+  - sudo make 64bit
   
 after_success:
   - git config --global user.email "meltedspark@gmail.com"
