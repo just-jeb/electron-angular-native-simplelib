@@ -16,5 +16,5 @@ after_build:
   - git add bin/**/*.dll
   - git commit -m "Build success for Windows [skip ci]"
   - git remote rm origin
-  - git remote add origin https://${SIMPLE_LIB_TOKEN}@github.com/meltedspark/electron-angular-native-simplelib.git
+  - git remote add origin https://%SIMPLE_LIB_TOKEN%@github.com/meltedspark/electron-angular-native-simplelib.git
   - git push
