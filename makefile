@@ -24,12 +24,12 @@ endif
 32bit: CPPFLAGS = $(CPPFLAGS_BASE) -m32
 32bit: LDFLAGS = $(LDFLAGS_BASE) -m32
 32bit: OUTPUT_DIR = $(NATIVE_ARTIFACTS_DIR)/ia32/$(OS)
-32bit: clean_objects $(simple_library) clean_objects
+32bit: $(simple_library) clean_objects
 
 64bit: CPPFLAGS = $(CPPFLAGS_BASE) -m64
 64bit: LDFLAGS = $(LDFLAGS_BASE) -m64
 64bit: OUTPUT_DIR =  $(NATIVE_ARTIFACTS_DIR)/x64/$(OS)
-64bit: clean_objects $(simple_library) clean_objects
+64bit: $(simple_library) clean_objects
 
 $(simple_library): $(simple_library_objects)
 	mkdir -p $(OUTPUT_DIR)
