@@ -16,6 +16,7 @@ ifeq ($(OS),Darwin)
 	LDFLAGS_BASE += -dynamiclib
 	simple_library = $(simple_library_name).dylib
 else
+    OS = linux
 	LDFLAGS_BASE += -shared
 	simple_library = $(simple_library_name).so
 endif
