@@ -43,5 +43,3 @@ clean_objects:
 
 clean: clean_objects
 	rm -f  $(OUTPUT_DIR)/$(simple_library)
-
-
