@@ -5,7 +5,7 @@ INCLUDES = \
 
 CPPFLAGS_BASE = -Wall -Werror -fPIC
 
-LDFLAGS_BASE = -Wall -fPIC -Wl,-s
+LDFLAGS_BASE = -Wall -fPIC
 
 OS = $(shell uname)
 
