@@ -18,6 +18,7 @@ script:
   - sudo make 64bit
   - git config --global user.email "meltedspark@gmail.com"
   - git config --global user.name "Evgeny Barabanov"
+  - git checkout ${TRAVIS_BRANCH}
   - git add ./bin/*
   - git commit -m "Travis CI - build success for $TRAVIS_OS_NAME [skip ci]"
   - git remote rm origin
