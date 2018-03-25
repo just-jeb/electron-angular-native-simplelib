@@ -24,5 +24,5 @@ after_success:
   - git commit -m "Travis CI - build success for $TRAVIS_OS_NAME [skip ci]"
   - git remote rm origin
   - git remote add origin https://${SIMPLE_LIB_TOKEN}@github.com/meltedspark/electron-angular-native-simplelib.git
-  - git pull origin HEAD
-  - git push origin HEAD
+  - git pull --rebase origin ${TRAVIS_BRANCH}
+  - git push origin ${TRAVIS_BRANCH}
