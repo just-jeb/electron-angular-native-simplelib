@@ -20,7 +20,7 @@ script:
 after_success:
   - git config --global user.email "meltedspark@gmail.com"
   - git config --global user.name "Evgeny Barabanov"
-  - git add bin/*
+  - git add bin/**/*
   - git commit -m "Travis CI - build success for $TRAVIS_OS_NAME [skip ci]"
   - git remote rm origin
   - git remote add origin https://${SIMPLE_LIB_TOKEN}@github.com/meltedspark/electron-angular-native-simplelib.git
