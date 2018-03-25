@@ -29,10 +29,10 @@ endif
 64bit: CPPFLAGS = $(CPPFLAGS_BASE) -m64
 64bit: LDFLAGS = $(LDFLAGS_BASE) -m64
 64bit: OUTPUT_DIR =  $(NATIVE_ARTIFACTS_DIR)/x64/$(OS)
-64bit: clean $(simple_library)
+64bit: clean $(simple_library) clean_objects
 
 $(simple_library): $(simple_library_objects)
-	mkdir -p $(OUTPUT_DIR)
+	mkdir -p $(OUTPUT_DIR) clean_objects
 	$(CXX) $^ $(LDFLAGS) -o $(OUTPUT_DIR)/$@
 
 %.o: %.cpps
