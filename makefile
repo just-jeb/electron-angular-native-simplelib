@@ -31,7 +31,6 @@ endif
 64bit: clean_objects $(simple_library)
 
 $(simple_library): $(simple_library_objects)
-    mkdir -p $(OUTPUT_DIR)
 	$(CXX) $^ $(LDFLAGS) -o $(OUTPUT_DIR)/$@
 
 %.o: %.cpps
